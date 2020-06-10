@@ -1,0 +1,12 @@
+<hello name="{{ name }}"></hello>
+<p>
+	Start editing to see some magic happen :)
+</p>
+<div class="autocomplete">
+	<label>Search Hear</label>&nbsp;
+	<input type="text" name="test" [(ngModel)]="searchText" (blur)="getData()">
+	<div class="autocomplete-items" *ngIf="searchRes.length > 0">
+		<div *ngFor="let data of searchRes">{{data.locationName}}{{data.locationCode}}
+	</div>
+</div>
+</div>
